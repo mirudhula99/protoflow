@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LOGO — Sign in</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #eef2ff 0%, #f8fafc 100%);
+      color: #0f172a;
+    }
+    .card {
+      width: 360px;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      padding: 32px 28px;
+    }
+    .brand { display: flex; align-items: center; gap: 10px; margin-bottom: 24px; }
+    .brand .dot { width: 26px; height: 26px; border-radius: 7px; background: #4f46e5; }
+    .brand .name { font-weight: 700; font-size: 18px; letter-spacing: -0.02em; }
+    h1 { font-size: 20px; margin-bottom: 4px; }
+    p.sub { color: #64748b; font-size: 13px; margin-bottom: 22px; }
+    label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+    input {
+      width: 100%; padding: 10px 12px; font-size: 14px;
+      border: 1px solid #cbd5e1; border-radius: 8px; margin-bottom: 16px;
+      outline: none; transition: border-color .15s, box-shadow .15s;
+    }
+    input:focus { border-color: #4f46e5; box-shadow: 0 0 0 3px rgba(79,70,229,.15); }
+    button {
+      width: 100%; padding: 11px; font-size: 14px; font-weight: 600;
+      color: #fff; background: #4f46e5; border: none; border-radius: 8px;
+      cursor: pointer; transition: background .15s;
+    }
+    button:hover { background: #4338ca; }
+    .foot { text-align: center; margin-top: 18px; font-size: 12.5px; color: #64748b; }
+    .foot a { color: #4f46e5; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="brand">
+      <div class="dot"></div>
+      <div class="name">LOGO</div>
+    </div>
+    <h1>Welcome back</h1>
+    <p class="sub">Sign in to your workspace to continue.</p>
+
+    <form id="login-form">
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="you@example.com" value="alex.kim@example.com" />
+
+      <label for="password">Password</label>
+      <input id="password" type="password" placeholder="••••••••" value="password" />
+
+      <button id="sign-in-btn" type="button">Sign in</button>
+    </form>
+
+    <p class="foot">No account? <a href="#">Create one</a></p>
+  </main>
+</body>
+</html>

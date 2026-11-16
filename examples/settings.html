@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LOGO — Settings</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f8fafc; color: #0f172a; min-height: 100vh;
+    }
+    header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 28px; background: #fff; border-bottom: 1px solid #e2e8f0;
+    }
+    .brand { display: flex; align-items: center; gap: 10px; }
+    .brand .dot { width: 24px; height: 24px; border-radius: 7px; background: #4f46e5; }
+    .brand .name { font-weight: 700; font-size: 16px; letter-spacing: -0.02em; }
+    .back { font-size: 13px; font-weight: 600; color: #4f46e5; text-decoration: none; }
+    .back:hover { text-decoration: underline; }
+    main { padding: 28px; max-width: 620px; margin: 0 auto; }
+    h1 { font-size: 22px; margin-bottom: 4px; }
+    p.sub { color: #64748b; font-size: 14px; margin-bottom: 24px; }
+    .panel { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; }
+    label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; margin-top: 16px; }
+    label:first-child { margin-top: 0; }
+    input, select {
+      width: 100%; padding: 10px 12px; font-size: 14px;
+      border: 1px solid #cbd5e1; border-radius: 8px; outline: none;
+      transition: border-color .15s, box-shadow .15s; background: #fff;
+    }
+    input:focus, select:focus { border-color: #4f46e5; box-shadow: 0 0 0 3px rgba(79,70,229,.15); }
+    .toggle-row { display: flex; align-items: center; justify-content: space-between; margin-top: 18px; }
+    .toggle-row .t-label { font-size: 14px; font-weight: 600; }
+    .toggle-row .t-desc { font-size: 12.5px; color: #64748b; }
+    .btns { display: flex; gap: 12px; margin-top: 24px; }
+    button {
+      padding: 11px 20px; font-size: 14px; font-weight: 600; border-radius: 8px; cursor: pointer; border: none;
+    }
+    .primary { color: #fff; background: #4f46e5; }
+    .primary:hover { background: #4338ca; }
+    .cancel { background: #f1f5f9; color: #475569; }
+    .cancel:hover { background: #e2e8f0; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="dot"></div>
+      <div class="name">LOGO</div>
+    </div>
+    <a id="back-link" class="back" href="dashboard.html">← Back to dashboard</a>
+  </header>
+
+  <main>
+    <h1>Settings</h1>
+    <p class="sub">Manage your account preferences.</p>
+
+    <section class="panel">
+      <label for="name">Display name</label>
+      <input id="name" type="text" value="Alex Kim" />
+
+      <label for="email">Email</label>
+      <input id="email" type="email" value="alex.kim@example.com" />
+
+      <label for="tz">Time zone</label>
+      <select id="tz">
+        <option>(GMT-05:00) Eastern Time</option>
+        <option>(GMT+00:00) UTC</option>
+        <option>(GMT+05:30) India Standard Time</option>
+      </select>
+
+      <div class="toggle-row">
+        <div>
+          <div class="t-label">Email notifications</div>
+          <div class="t-desc">Get notified when a task is assigned to you.</div>
+        </div>
+        <input type="checkbox" checked style="width:auto;" />
+      </div>
+
+      <div class="btns">
+        <button id="save-btn" class="primary" type="button">Save changes</button>
+        <button id="cancel-btn" class="cancel" type="button">Cancel</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
